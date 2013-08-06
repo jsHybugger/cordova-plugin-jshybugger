@@ -42,6 +42,10 @@
 		</config-file>
 	
 		<config-file target="res/xml/config.xml" parent="/*">
+			<content src="content://jsHybugger.org/file:///android_asset/www/index.html" />
+        </config-file>
+
+		<config-file target="res/xml/config.xml" parent="/*">
 			<access origin="*" />
         </config-file>
 
