@@ -60,7 +60,7 @@
 			</feature>
         </config-file>
 
-        <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova/" />
+        <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
 		<source-file src="src/android/libs/jshybugger-bundle-1.2.2.jar" target-dir="libs/" />
     </platform>
 

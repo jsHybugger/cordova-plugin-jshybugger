@@ -15,9 +15,9 @@
  */
 package org.jshybugger.cordova;
 
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.api.CordovaInterface;
-import org.apache.cordova.api.CordovaPlugin;
 import org.jshybugger.DebugServiceClient;
 
 /**
@@ -34,5 +34,4 @@ public class JsHybuggerPlugin extends CordovaPlugin {
 		// attach web view to debugging service 
 		DebugServiceClient.attachWebView(webView, cordova.getActivity());
 	}
-
 }
