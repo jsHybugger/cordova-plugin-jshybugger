@@ -2,14 +2,14 @@
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.jshybugger.cordova"
-    version="1.2.0">
+    version="2.0.0">
 
     <name>jsHybugger</name>
     <description>jsHybugger - Javascript debugger for Android</description>
     <license>Apache License 2.0</license>
 
 	<engines>
-		<engine name="cordova" version=">=2.3.0" />
+		<engine name="cordova" version=">=3.0.0" />
 	</engines>
 
 	
@@ -50,7 +50,7 @@
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">
-			<preference name="loadUrlTimeoutValue" value="120000" />
+			<preference name="loadUrlTimeoutValue" value="180000" />
         </config-file>
 			
 		<config-file target="res/xml/config.xml" parent="/*">
@@ -61,7 +61,7 @@
         </config-file>
 
         <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
-		<source-file src="src/android/libs/jshybugger-bundle-1.2.2.jar" target-dir="libs/" />
+		<source-file src="src/android/libs/jshybuggerce-bundle-2.0.0.jar" target-dir="libs/" />
     </platform>
 
 
