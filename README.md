@@ -8,7 +8,7 @@ This plugin allows you to debug the javascript code of your android phonegap app
 
 ## Use plugin
 
-* Forward TCP port:	adb forward tcp:8888 tcp:9999
+* Forward TCP port:	adb forward tcp:8888 tcp:8888
 
 * start chrome browser 
 
