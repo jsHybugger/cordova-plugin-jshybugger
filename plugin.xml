@@ -28,7 +28,7 @@
 				<meta-data android:name="instrumentStacksize" android:value="32000"/>
 				
 				<!-- regular expression for filenames which are not instrumented -->
-				<meta-data android:name="excludePattern" android:value="(\\.min\\.js|cordova|jquery|angular)"/>
+				<meta-data android:name="excludePattern" android:value="(\\.min\\.js|cordova|phonegap|jquery|angular)"/>
 				
 			</provider>
 			
