@@ -5,6 +5,8 @@ This plugin allows you to debug the javascript code of your android phonegap app
 ## Install plugin
 
 * phonegap local plugin add https://github.com/cyberflohr/cordova-plugin-jshybugger.git
+* open AndroidManifest.xml and verifiy that targetSdkVersion <= 16
+
 
 ## Use plugin
 
