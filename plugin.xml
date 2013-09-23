@@ -15,6 +15,10 @@
 	
     <!-- android -->
     <platform name="android">
+        <js-module src="jsHybuggerLoader.js" name="jsHybuggerLoader">
+            <runs />
+        </js-module>
+
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<!-- jsHybugger needs network access. -->
 			<uses-permission android:name="android.permission.INTERNET"/>
@@ -61,7 +65,7 @@
         </config-file>
 
         <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
-		<source-file src="src/android/libs/jshybuggerce-bundle-2.0.0.jar" target-dir="libs/" />
+		<source-file src="src/android/libs/jshybuggerce-bundle-2.0.1.jar" target-dir="libs/" />
     </platform>
 
 
