@@ -15,7 +15,7 @@
 	
     <!-- android -->
     <platform name="android">
-        <js-module src="jsHybuggerLoader.js" name="jsHybuggerLoader">
+        <js-module src="www/jsHybuggerLoader.js" name="jsHybuggerLoader">
             <runs />
         </js-module>
 
