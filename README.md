@@ -1,4 +1,4 @@
-#jsHybugger 2.1.1 plugin for PhoneGap 3.x
+#jsHybugger 2.1.2 plugin for PhoneGap 3.x
 
 This plugin allows you to debug the javascript code of your Android PhoneGap & Icenium apps.
 
