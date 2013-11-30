@@ -2,7 +2,7 @@
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.jshybugger.cordova"
-    version="3.2">
+    version="3.3">
 
     <name>jsHybugger</name>
     <description>jsHybugger - Javascript debugger for Android</description>
@@ -45,10 +45,6 @@
 			</service>	    
 		</config-file>
 	
-		<config-file target="res/xml/config.xml" parent="/*">
-			<content src="content://jsHybugger.org/file:///android_asset/www/index.html" />
-        </config-file>
-
 		<config-file target="res/xml/config.xml" parent="/*">
 			<access origin="*" />
         </config-file>

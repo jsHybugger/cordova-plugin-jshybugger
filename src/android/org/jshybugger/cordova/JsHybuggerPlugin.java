@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Wolfgang Flohr-Hochbichler (developer@jshybugger.org)
+ * Copyright 2013 Wolfgang Flohr-Hochbichler (info@jshybugger.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,26 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import org.jshybugger.DebugServiceClient;
 
+import android.net.Uri;
+
 /**
- * Attach webview to debggung service at plugin intialization time.
+ * Attach webview to jsHybugger debugging service at plug-in initialization time.
  * @author cyberflohr
  *
  */
 public class JsHybuggerPlugin extends CordovaPlugin {
 
+	private DebugServiceClient dbgClient;
+
 	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+		
 		super.initialize(cordova, webView);
+		dbgClient = DebugServiceClient.attachWebView(webView, cordova.getActivity());
+	}
 
-		// attach web view to debugging service 
-		DebugServiceClient.attachWebView(webView, cordova.getActivity());
+	@Override
+	public Uri remapUri(Uri uri) {
+		return Uri.parse(dbgClient.getDebugUrl(uri.toString()));
 	}
 }
