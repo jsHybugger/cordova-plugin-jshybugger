@@ -1,4 +1,3 @@
-cordova.define("org.jshybugger.cordova.jsHybuggerLoader", function(require, exports, module) {
 	console.log('executing jsHybuggerLoader checks');
 	if (typeof(JsHybugger) === 'undefined' && navigator.userAgent.indexOf("Chrome")<0) {
 		console.log('Redirecting to jsHybugger content provider');
@@ -7,4 +6,3 @@ cordova.define("org.jshybugger.cordova.jsHybuggerLoader", function(require, expo
 		console.log('Redirecting away from jsHybugger content provider');
 		window.location = window.location.toString().substr('content://jsHybugger.org/'.length);
 	}
-});
