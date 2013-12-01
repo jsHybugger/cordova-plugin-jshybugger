@@ -1,4 +1,3 @@
-	console.log('executing jsHybuggerLoader checks');
 	if (typeof(JsHybugger) === 'undefined' && navigator.userAgent.indexOf("Chrome")<0) {
 		console.log('Redirecting to jsHybugger content provider');
 		window.location = 'content://jsHybugger.org/' + window.location;
