@@ -2,7 +2,7 @@
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.jshybugger.cordova"
-    version="3.3.1">
+    version="3.4">
 
     <name>jsHybugger</name>
     <description>jsHybugger - Javascript debugger for Android</description>
@@ -61,7 +61,7 @@
         </config-file>
 
         <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
-		<source-file src="src/android/libs/jshybugger-library-3.3.jar" target-dir="libs/" />
+		<source-file src="src/android/libs/jshybugger-library-3.4.jar" target-dir="libs/" />
     </platform>
 
 
