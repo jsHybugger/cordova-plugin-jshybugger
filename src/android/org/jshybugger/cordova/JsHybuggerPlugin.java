@@ -41,14 +41,6 @@ public class JsHybuggerPlugin extends CordovaPlugin {
 	@Override
 	public Uri remapUri(Uri uri) {
 
-		String path = uri != null ? uri.getPath() : null;
-		
-		// only remote JS and HTML resources must be loaded via jsHybugger all others can pass
-		// adjust the IF condition you match your case
-		if ((path != null) && (path.endsWith(".js") || path.endsWith(".html"))) {
-			return Uri.parse(dbgClient.getDebugUrl(uri.toString()));
-		} else {
-			return uri;
-		}
+		return Uri.parse(dbgClient.getDebugUrl(uri.toString()));
 	}
 }

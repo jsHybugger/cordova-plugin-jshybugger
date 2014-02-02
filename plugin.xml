@@ -2,7 +2,7 @@
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.jshybugger.cordova"
-    version="3.4.1">
+    version="4.0.0">
 
     <name>jsHybugger</name>
     <description>jsHybugger - Javascript debugger for Android</description>
@@ -25,24 +25,28 @@
 		</config-file>
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<!--  jsHybugger content provider -->
-			<provider android:authorities="jsHybugger.org" android:exported="false" android:name="org.jshybugger.DebugContentProvider">
-				
-				<!-- if a StackOverflowError occurs during file instrumentation increase this value - default 32000 bytes  -->
-				<meta-data android:name="instrumentStacksize" android:value="32000"/>
-				
-				<!-- regular expression for filenames which are not instrumented -->
-				<!-- meta-data android:name="excludePattern" android:value="(\\.min\\.js)"/ -->
-				
-			</provider>
-			
-			<!--  jsHybugger debug service -->
-			<service android:enabled="true" android:exported="false" android:name="org.jshybugger.DebugService">
-				
-				<!-- debug listen port - default 8888 -->
+		
+			<!--  jsHybugger debug provider -->
+	    	<provider android:authorities="jsHybugger.org" android:enabled="true"  android:exported="false" android:name="org.jshybugger.DebugContentProvider">
+    	    
+				<!-- jsHybugger debugging port -->
 				<meta-data android:name="debugPort" android:value="8888"/>
-				<meta-data android:name="domainSocketName" android:value="jsHybugger"/>
-			</service>	    
+				
+				<!--  if you work with local or remote (without proxy enabled) files and you use other file extensions for JS and HTML resources -->
+				<meta-data android:name="mimeTypesHtml" android:value=".html"/>
+				<meta-data android:name="mimeTypesJavascript" android:value=".js"/>
+				
+				<!-- set to true if you want to debug remote resource URLs, and the default implementation is not working -->
+				<meta-data android:name="proxyEnabled" android:value="true"/>
+				<meta-data android:name="proxyPort" android:value="8080"/>
+						
+				<!-- set to true if a proxy is required to access the remote site  -->
+				<meta-data android:name="upstreamProxyEnabled" android:value="false"/>
+				<meta-data android:name="upstreamProxyHost" android:value="192.168.178.1"/>
+				<meta-data android:name="upstreamProxyPort" android:value="8080"/>
+									
+			</provider>
+
 		</config-file>
 	
 		<config-file target="res/xml/config.xml" parent="/*">
@@ -61,7 +65,7 @@
         </config-file>
 
         <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
-		<source-file src="src/android/libs/jshybugger-library-3.4.1.jar" target-dir="libs/" />
+		<source-file src="src/android/libs/jshybugger-library-4.0.jar" target-dir="libs/" />
     </platform>
 
 
