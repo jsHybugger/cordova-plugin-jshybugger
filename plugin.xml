@@ -39,7 +39,7 @@
 				<meta-data android:name="mimeTypesJavascript" android:value=".js"/>
 				
 				<!-- set to true if you want to debug remote resource URLs, and the default implementation is not working -->
-				<meta-data android:name="proxyEnabled" android:value="true"/>
+				<meta-data android:name="proxyEnabled" android:value="false"/>
 				<meta-data android:name="proxyPort" android:value="8080"/>
 						
 				<!-- set to true if a proxy is required to access the remote site  -->
