@@ -1,7 +1,5 @@
-	if (typeof(JsHybugger) === 'undefined' && navigator.userAgent.indexOf("Chrome")<0) {
-		console.log('Redirecting to jsHybugger content provider');
-		window.location = 'content://jsHybugger.org/' + window.location;
-	} else if (/^content:\/\/jsHybugger.org/.test(window.location) && navigator.userAgent.indexOf("Chrome")>0) {
-		console.log('Redirecting away from jsHybugger content provider');
-		window.location = window.location.toString().substr('content://jsHybugger.org/'.length);
-	}
+var newLocation = typeof(JsHybuggerNI) !== 'undefined' ? JsHybuggerNI.getDebugUrl(window.location.toString()) : window.location.toString();
+if (newLocation != window.location.toString()) {
+	console.log('jsHybugger redirected to: ' + newLocation);
+	window.location = newLocation;
+}

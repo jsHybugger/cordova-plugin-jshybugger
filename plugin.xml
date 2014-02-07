@@ -27,7 +27,7 @@
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 		
 			<!--  jsHybugger debug provider -->
-	    	<provider android:authorities="jsHybugger.org" android:enabled="true"  android:exported="false" android:name="org.jshybugger.DebugContentProvider">
+	    	<provider android:authorities="$PACKAGE_NAME.jsHybugger" android:enabled="true"  android:exported="false" android:name="org.jshybugger.DebugContentProvider">
     	    
 				<!-- jsHybugger debugging port -->
 				<meta-data android:name="debugPort" android:value="8888"/>
@@ -67,7 +67,7 @@
         </config-file>
 
         <source-file src="src/android/org/jshybugger/cordova/JsHybuggerPlugin.java" target-dir="src/org/jshybugger/cordova" />
-		<source-file src="src/android/libs/jshybugger-library-4.0.jar" target-dir="libs/" />
+		<source-file src="src/android/libs/jshybugger-library-4.1.jar" target-dir="libs/" />
     </platform>
 
 
