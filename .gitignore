@@ -18,3 +18,6 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+target/
+pom.xml
+src/assembly/assembly.xml
