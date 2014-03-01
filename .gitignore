@@ -20,3 +20,6 @@ local.properties
 .project
 target/
 src/assembly/assembly.xml
+
+# IDEA project file
+*.iml
