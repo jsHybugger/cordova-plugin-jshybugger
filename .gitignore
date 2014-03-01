@@ -19,5 +19,4 @@ local.properties
 .classpath
 .project
 target/
-pom.xml
 src/assembly/assembly.xml
