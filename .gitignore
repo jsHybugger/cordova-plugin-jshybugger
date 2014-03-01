@@ -19,7 +19,6 @@ local.properties
 .classpath
 .project
 target/
-src/assembly/assembly.xml
 
 # IDEA project file
 *.iml
