@@ -30,6 +30,7 @@
 				<meta-data android:name="debugPort" android:value="8888"/>
 				<meta-data android:name="releaseBuildDebugging" android:value="true"/>
 				<meta-data android:name="excludeFiles" android:value="*.min.js,*cordova*.js"/>
+				<meta-data android:name="excludeHosts" android:value="*.google*.com,*.twitter.com,*.gstatic.com"/>
 				
 				<!--  if you work with local or remote (without proxy enabled) files and you use other file extensions for JS and HTML resources -->
 				<meta-data android:name="mimeTypesHtml" android:value=".html"/>
