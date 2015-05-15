@@ -15,12 +15,16 @@
  */
 package org.jshybugger.cordova;
 
+import java.lang.reflect.Method;
+
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
 import org.jshybugger.DebugServiceClient;
 
 import android.net.Uri;
+import android.util.Log;
+import android.webkit.WebView;
 
 /**
  * Attach webview to jsHybugger debugging service at plug-in initialization time.
@@ -35,7 +39,20 @@ public class JsHybuggerPlugin extends CordovaPlugin {
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		
 		super.initialize(cordova, webView);
-		dbgClient = DebugServiceClient.attachWebView(webView, cordova.getActivity());
+		
+		if (webView instanceof WebView) { // if cordova < 4.0
+			dbgClient = DebugServiceClient.attachWebView((WebView)webView, cordova.getActivity());
+		} else {
+			try {
+				Method method = webView.getClass().getMethod("getView");
+			    if (method != null) {
+			        WebView view = (WebView)method.invoke(webView);
+			        dbgClient = DebugServiceClient.attachWebView(view, cordova.getActivity());
+			    }
+			} catch (Exception ex) {
+				Log.w("JsHybuggerPlugin", "Plugin initialization failed", ex);
+			}
+		}
 	}
 
 	@Override

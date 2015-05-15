@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="org.jshybugger.cordova" version="4.5.8" xmlns="http://cordova.apache.org/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="org.jshybugger.cordova" version="4.5.9" xmlns="http://cordova.apache.org/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <name>jsHybugger</name>
     <description>jsHybugger - Javascript debugger for Android</description>
@@ -15,11 +15,6 @@
         <js-module name="jsHybuggerLoader" src="www/jsHybuggerLoader.js">
             <runs/>
         </js-module>
-
-		<config-file parent="/manifest" target="AndroidManifest.xml">
-			<!-- jsHybugger needs network access. -->
-			<uses-permission android:name="android.permission.INTERNET"/>
-		</config-file>
 
 		<config-file parent="/manifest/application" target="AndroidManifest.xml">
 		
@@ -51,6 +46,10 @@
 	
 		<config-file parent="/*" target="res/xml/config.xml">
 			<access origin="*"/>
+        </config-file>
+
+		<config-file parent="/*" target="res/xml/config.xml">
+			<allow-navigation href="content:*"/>
         </config-file>
 
 		<config-file parent="/*" target="res/xml/config.xml">
