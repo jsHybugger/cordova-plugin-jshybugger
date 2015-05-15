@@ -16,11 +16,6 @@
             <runs/>
         </js-module>
 
-		<config-file parent="/manifest" target="AndroidManifest.xml">
-			<!-- jsHybugger needs network access. -->
-			<uses-permission android:name="android.permission.INTERNET"/>
-		</config-file>
-
 		<config-file parent="/manifest/application" target="AndroidManifest.xml">
 		
 			<!--  jsHybugger debug provider -->
@@ -51,6 +46,10 @@
 	
 		<config-file parent="/*" target="res/xml/config.xml">
 			<access origin="*"/>
+        </config-file>
+
+		<config-file parent="/*" target="res/xml/config.xml">
+			<allow-navigation href="content:*"/>
         </config-file>
 
 		<config-file parent="/*" target="res/xml/config.xml">
