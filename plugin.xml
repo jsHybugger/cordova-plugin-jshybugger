@@ -73,41 +73,41 @@ IMPORTANT NOTE
 
 Before using jsHybugger, please check your android platform version:
 
-$ cordova platform list
+  $ cordova platform list
 
 If your android platform version is
 
 - 4.0.0 or higher
 
-Make sure the cordova-plugin-whitelist plugin is installed:
+  Make sure the cordova-plugin-whitelist plugin is installed:
 
-$ cordova plugin add cordova-plugin-whitelist
+    $ cordova plugin add cordova-plugin-whitelist
 
 - 3.6.x
 
-Update your android platform:
+  Update your android platform:
 
-$ cordova platform remove android
-$ cordova platform add android@3.7.0
+    $ cordova platform remove android
+    $ cordova platform add android@3.7.0
 
 - 3.5.x
 
-Install a newer version of Cordova and check again.
+  Install a newer version of Cordova and check again.
 
 - 3.4.x or lower
 
-Nothing to do.
+  Nothing to do.
 
 With PhoneGap or Ionic, please use the corresponding commands for your
 environment, e.g.
 
-$ phonegap plugin list
-$ phonegap plugin remove
-$ phonegap plugin add
+  $ phonegap plugin list
+  $ phonegap plugin remove
+  $ phonegap plugin add
 
-$ ionic plugin list
-$ ionic plugin remove
-$ ionic plugin add
+  $ ionic plugin list
+  $ ionic plugin remove
+  $ ionic plugin add
 
 Questions? Please contact support@jshybugger.com.
     </info>
