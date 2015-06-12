@@ -9,7 +9,7 @@
 		<engine name="cordova" version=">=3.0.0"/>
 	</engines>
 
-	
+
     <!-- android -->
     <platform name="android">
         <js-module name="jsHybuggerLoader" src="www/jsHybuggerLoader.js">
@@ -17,33 +17,33 @@
         </js-module>
 
 		<config-file parent="/manifest/application" target="AndroidManifest.xml">
-		
+
 			<!--  jsHybugger debug provider -->
 	    	<provider android:authorities="$PACKAGE_NAME.jsHybugger" android:enabled="true" android:exported="false" android:name="org.jshybugger.DebugContentProvider">
-    	    
+
 				<!-- jsHybugger debugging port -->
 				<meta-data android:name="debugPort" android:value="8888"/>
 				<meta-data android:name="releaseBuildDebugging" android:value="true"/>
 				<meta-data android:name="excludeFiles" android:value="*.min.js,*/cordova.js"/>
 				<meta-data android:name="excludeHosts" android:value="*.google*.com,*.twitter.com,*.gstatic.com"/>
-				
+
 				<!--  if you work with local or remote (without proxy enabled) files and you use other file extensions for JS and HTML resources -->
 				<meta-data android:name="mimeTypesHtml" android:value=".html"/>
 				<meta-data android:name="mimeTypesJavascript" android:value=".js"/>
-				
+
 				<!-- set to true if you want to debug remote resource URLs, and the default implementation is not working -->
 				<meta-data android:name="proxyEnabled" android:value="false"/>
 				<meta-data android:name="proxyPort" android:value="8080"/>
-						
+
 				<!-- set to true if a proxy is required to access the remote site  -->
 				<meta-data android:name="upstreamProxyEnabled" android:value="false"/>
 				<meta-data android:name="upstreamProxyHost" android:value="192.168.178.1"/>
 				<meta-data android:name="upstreamProxyPort" android:value="8080"/>
-									
+
 			</provider>
 
 		</config-file>
-	
+
 		<config-file parent="/*" target="res/xml/config.xml">
 			<access origin="*"/>
         </config-file>
@@ -55,7 +55,7 @@
 		<config-file parent="/*" target="res/xml/config.xml">
 			<preference name="loadUrlTimeoutValue" value="180000"/>
         </config-file>
-			
+
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="jsHybugger">
 				<param name="android-package" value="org.jshybugger.cordova.JsHybuggerPlugin"/>
@@ -67,5 +67,49 @@
 		<source-file src="src/android/libs/jshybugger-library.jar" target-dir="libs/"/>
     </platform>
 
+    <info>
+      IMPORTANT NOTE
+      ==============
+
+      Before using jsHybugger, please check your android platform version:
+
+      $ cordova platform list
+
+      If your android platform version is
+
+      - 4.0.0 or higher
+
+      Make sure the cordova-plugin-whitelist plugin is installed:
+
+      $ cordova plugin add cordova-plugin-whitelist
+
+      - 3.6.x
+
+      Update your android platform:
+
+      $ cordova platform remove android
+      $ cordova platform add android@3.7.0
+
+      - 3.5.x
+
+      Install a newer version of Cordova and check again.
+
+      - 3.4.x or lower
+
+      Nothing to do.
+
+      With PhoneGap or Ionic, please use the corresponding commands for your
+      environment, e.g.
+
+      $ phonegap plugin list
+      $ phonegap plugin remove
+      $ phonegap plugin add
+
+      $ ionic plugin list
+      $ ionic plugin remove
+      $ ionic plugin add
+
+      Questions? Please contact support@jshybugger.com.
+    </info>
 
 </plugin>
