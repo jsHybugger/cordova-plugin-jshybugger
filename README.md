@@ -1,3 +1,3 @@
-#jsHybugger Plugin for Cordova 3.x
+#jsHybugger Plugin for Cordova
 
 Visit http://www.jshybugger.com/ for more information.
