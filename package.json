@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-jshybugger",
+  "version": "4.5.9",
+  "description": "jsHybugger - Javascript debugger for Android",
+  "cordova": {
+    "id": "org.jshybugger.cordova",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsHybugger/cordova-plugin-jshybugger.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "SF Systems GmbH",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/jsHybugger/cordova-plugin-jshybugger/issues"
+  },
+  "homepage": "https://github.com/jsHybugger/cordova-plugin-jshybugger"
+}
